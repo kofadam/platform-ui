@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="platform-ui.css"/>
+  <title>platform-ui — Component Demo</title>
+  <style>
+    .demo-section {
+      margin-bottom: 48px;
+    }
+    .demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .demo-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text4);
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="pf-header">
+  <a class="pf-logo" href="#">
+    <div class="pf-logo-icon">PU</div>
+    <span class="pf-logo-text">Platform<span>UI</span></span>
+  </a>
+  <nav class="pf-nav">
+    <a href="#buttons">Buttons</a>
+    <a href="#cards">Cards</a>
+    <a href="#forms">Forms</a>
+    <a href="#tables">Tables</a>
+    <a href="#modals" class="active">Demo</a>
+  </nav>
+</header>
+
+<div class="page-content container">
+
+  <!-- ── Hero ── -->
+  <div class="demo-section">
+    <div class="pf-page-header" style="margin: -40px -24px 32px; padding: 28px 24px;">
+      <h1>platform-ui Component Demo</h1>
+      <p>All components in one page. Use this as a reference when building new apps.</p>
+    </div>
+  </div>
+
+  <!-- ── Buttons ── -->
+  <div class="demo-section" id="buttons">
+    <div class="section-label">Buttons</div>
+
+    <div class="demo-label">Variants</div>
+    <div class="demo-row">
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-ghost">Ghost</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-danger">Danger</button>
+      <button class="btn btn-violet">Violet</button>
+    </div>
+
+    <div class="demo-label">Sizes</div>
+    <div class="demo-row">
+      <button class="btn btn-primary btn-sm">Small</button>
+      <button class="btn btn-primary">Default</button>
+      <button class="btn btn-primary btn-lg">Large</button>
+    </div>
+
+    <div class="demo-label">States</div>
+    <div class="demo-row">
+      <button class="btn btn-primary" disabled>Disabled Primary</button>
+      <button class="btn btn-ghost" disabled>Disabled Ghost</button>
+    </div>
+
+    <div class="demo-label">With icons</div>
+    <div class="demo-row">
+      <button class="btn btn-primary">⚡ Generate</button>
+      <button class="btn btn-ghost">⎘ Copy</button>
+      <button class="btn btn-success">↑ Register</button>
+      <button class="btn btn-icon">✕</button>
+      <button class="btn btn-icon danger">✕</button>
+    </div>
+  </div>
+
+  <!-- ── Badges & Pills ── -->
+  <div class="demo-section" id="badges">
+    <div class="section-label">Badges & Pills</div>
+
+    <div class="demo-label">Badges</div>
+    <div class="demo-row">
+      <span class="badge badge-blue">JSON</span>
+      <span class="badge badge-violet">Builder</span>
+      <span class="badge badge-green">Active</span>
+      <span class="badge badge-yellow">Warning</span>
+      <span class="badge badge-red">Error</span>
+      <span class="badge badge-gray">Draft</span>
+    </div>
+
+    <div class="demo-label">Pills (interactive)</div>
+    <div class="demo-row">
+      <button class="pill active">JSON</button>
+      <button class="pill">CSV</button>
+      <button class="pill disabled">XML</button>
+    </div>
+  </div>
+
+  <!-- ── Alerts ── -->
+  <div class="demo-section" id="alerts">
+    <div class="section-label">Alerts</div>
+    <div style="display:flex; flex-direction:column; gap:10px; max-width:600px;">
+      <div class="alert alert-info">
+        <span class="alert-icon">ℹ️</span>
+        <span>The schema registry is in-memory — schemas will not persist across restarts.</span>
+      </div>
+      <div class="alert alert-success">
+        <span class="alert-icon">✓</span>
+        <span>Schema registered successfully. Copy the ID to use in your pipelines.</span>
+      </div>
+      <div class="alert alert-warning">
+        <span class="alert-icon">⚠️</span>
+        <span>XML schema generation is not supported. Provide your XSD manually.</span>
+      </div>
+      <div class="alert alert-danger">
+        <span class="alert-icon">✕</span>
+        <span>Validation failed — 3 errors found. See the errors list below.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Cards ── -->
+  <div class="demo-section" id="cards">
+    <div class="section-label">Cards</div>
+
+    <div class="demo-label">Basic & accented</div>
+    <div class="grid-4" style="margin-bottom:16px;">
+      <div class="card card-blue">
+        <strong>Blue accent</strong>
+        <p style="margin-top:6px">Use for primary actions or JSON format.</p>
+      </div>
+      <div class="card card-violet">
+        <strong>Violet accent</strong>
+        <p style="margin-top:6px">Use for builder or visual tools.</p>
+      </div>
+      <div class="card card-green">
+        <strong>Green accent</strong>
+        <p style="margin-top:6px">Use for success states or registry.</p>
+      </div>
+      <div class="card card-yellow">
+        <strong>Yellow accent</strong>
+        <p style="margin-top:6px">Use for warnings or conditionals.</p>
+      </div>
+    </div>
+
+    <div class="demo-label">Stat cards</div>
+    <div class="grid-4">
+      <div class="stat-card">
+        <div class="stat-value">1,024</div>
+        <div class="stat-label">API Calls (24h)</div>
+        <div class="stat-delta up">↑ 12% vs yesterday</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">42</div>
+        <div class="stat-label">Registered Schemas</div>
+        <div class="stat-delta">Stable</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">2</div>
+        <div class="stat-label">Running Pods</div>
+        <div class="stat-delta up">All healthy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color:var(--green)">99.9%</div>
+        <div class="stat-label">Uptime (30d)</div>
+        <div class="stat-delta">0 incidents</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Forms ── -->
+  <div class="demo-section" id="forms">
+    <div class="section-label">Forms</div>
+    <div class="grid-2">
+      <div>
+        <div class="form-group">
+          <label class="form-label">Text input</label>
+          <input type="text" placeholder="Enter value..."/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">With hint</label>
+          <input type="text" placeholder="e.g. user-schema-v1"/>
+          <span class="form-hint">A short descriptive name for this schema.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Select</label>
+          <select>
+            <option>JSON</option>
+            <option>CSV</option>
+            <option>XML</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" checked/>
+            Required field
+          </label>
+        </div>
+      </div>
+      <div>
+        <div class="form-group" style="height:100%;">
+          <label class="form-label">Monospace textarea (code/JSON)</label>
+          <textarea class="mono" style="height:180px;" placeholder='{
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" }
+  }
+}'></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Tables ── -->
+  <div class="demo-section" id="tables">
+    <div class="section-label">Tables</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Schema ID</th>
+            <th>Format</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">3fa85f64-5717...</td>
+            <td><span class="badge badge-blue">JSON</span></td>
+            <td>User object v1</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td><button class="btn btn-icon danger">✕</button></td>
+          </tr>
+          <tr>
+            <td class="mono">8c3d1e92-4a2b...</td>
+            <td><span class="badge badge-violet">CSV</span></td>
+            <td>Employee import</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td><button class="btn btn-icon danger">✕</button></td>
+          </tr>
+          <tr>
+            <td class="mono">a1f7b3c9-9e8d...</td>
+            <td><span class="badge badge-yellow">XML</span></td>
+            <td>Invoice XSD</td>
+            <td><span class="badge badge-gray">Draft</span></td>
+            <td><button class="btn btn-icon danger">✕</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── Status ── -->
+  <div class="demo-section" id="status">
+    <div class="section-label">Status indicators</div>
+    <div class="card" style="padding:0; overflow:hidden; max-width:500px;">
+      <div class="status-bar">
+        <div class="status-dot ok pulse"></div>
+        <span class="status-text ok">Redis connected</span>
+        <span style="margin-left:auto; font-size:0.7rem; color:var(--text4)">backend: redis</span>
+      </div>
+      <div class="status-bar">
+        <div class="status-dot error"></div>
+        <span class="status-text error">Validation failed — 2 errors</span>
+      </div>
+      <div class="status-bar">
+        <div class="status-dot warning"></div>
+        <span class="status-text warning">Registry in-memory — schemas not persistent</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Code ── -->
+  <div class="demo-section" id="code">
+    <div class="section-label">Code & monospace</div>
+    <p style="margin-bottom:12px">Use <code>inline code</code> for field names, endpoints like <code>POST /validate</code>, or values like <code>schema_id</code>.</p>
+    <pre>{
+  "<span class="json-key">"valid"</span>: <span class="json-bool">true</span>,
+  <span class="json-key">"format"</span>: <span class="json-string">"json"</span>,
+  <span class="json-key">"errors"</span>: []
+}</pre>
+  </div>
+
+  <!-- ── Modal trigger ── -->
+  <div class="demo-section" id="modals">
+    <div class="section-label">Modals</div>
+    <button class="btn btn-primary"
+            onclick="document.getElementById('demoModal').classList.add('open')">
+      Open Modal
+    </button>
+  </div>
+
+</div><!-- /container -->
+
+<!-- Status bar at bottom -->
+<div class="status-bar" style="position:fixed; bottom:0; left:0; right:0; border-top:1px solid var(--border); border-bottom:none;">
+  <div class="status-dot ok pulse"></div>
+  <span class="status-text">platform-ui demo</span>
+  <span style="margin-left:auto; font-size:0.7rem; color:var(--text4)">Ctrl+Enter to submit</span>
+</div>
+
+<!-- Demo Modal -->
+<div class="modal-overlay" id="demoModal"
+     onclick="if(event.target===this) this.classList.remove('open')">
+  <div class="modal">
+    <div class="modal-title">Register Schema</div>
+    <div class="modal-subtitle">Save to the registry and get a reusable ID for your pipelines.</div>
+
+    <div class="form-group">
+      <label class="form-label">Format</label>
+      <input type="text" value="json" readonly/>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description <span style="color:var(--text4);font-weight:400;text-transform:none">optional</span></label>
+      <input type="text" placeholder="e.g. User profile schema v1"/>
+    </div>
+
+    <div class="alert alert-success" style="display:none" id="demoResult">
+      <span class="alert-icon">✓</span>
+      <span>Schema registered — <code>3fa85f64-5717-4562-b3fc-2c963f66afa6</code></span>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-ghost"
+              onclick="document.getElementById('demoModal').classList.remove('open')">
+        Close
+      </button>
+      <button class="btn btn-primary"
+              onclick="document.getElementById('demoResult').style.display='flex'; this.textContent='✓ Registered'; this.disabled=true;">
+        Register
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
