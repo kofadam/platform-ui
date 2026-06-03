@@ -6,6 +6,9 @@ No framework. No build step. No external dependencies. Drop one file into any ap
 
 ---
 
+<img width="3026" height="1752" alt="image" src="https://github.com/user-attachments/assets/9136d8aa-fb2a-46b0-ad29-b7ab2fe69d45" />
+
+
 ## Quick start
 
 ```bash
